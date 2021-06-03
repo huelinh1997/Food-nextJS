@@ -1,0 +1,22 @@
+.slick-slider-custom {
+  .slick-active {
+    //button
+  }
+  .slick-dots {
+    li {
+      button {
+        &::before {
+          font-size: 8px;
+        }
+      }
+      &.slick-active {
+        button {
+          &::before {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,65 +1,70 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import React from 'react';
+import Head from 'next/head';
+import { Row, Col } from 'reactstrap';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import MainLayout from '../components/MainLayout';
+import Search from '../components/SearchInput';
+import Card from '../components/Card';
+// import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <MainLayout className="home-page" typeHeader="cart">
+        <>
+          <h1 className="main-title">Delicious food for you</h1>
+          <Search placeholder="Search" />
+          <div className="pt-5">
+            <Tabs className="custom-tab">
+              <TabList className="custom-tab-list custom-tab-transparent d-flex">
+                <Tab>Foods</Tab>
+                <Tab>Drinks</Tab>
+                <Tab>Snacks</Tab>
+                <Tab>Sauce</Tab>
+              </TabList>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+              <TabPanel className="custom-tab-panel">
+                <div>
+                  <div className="products">
+                    <div className="products-wrap d-flex pt-5 p-b-80">
+                      <Row className="flex-nowrap p-r-35">
+                        <Col>
+                          <div className="products-card">
+                            <Card />
+                          </div>
+                        </Col>
+                        <Col>
+                          <div className="products-card">
+                            <Card />
+                          </div>
+                        </Col>
+                        <Col>
+                          <div className="products-card">
+                            <Card />
+                          </div>
+                        </Col>
+                      </Row>
+                    </div>
+                  </div>
+                </div>
+              </TabPanel>
+              <TabPanel className="custom-tab-panel">
+                <h2>Any content 2</h2>
+              </TabPanel>
+              <TabPanel className="custom-tab-panel">
+                <h2>Any content 3</h2>
+              </TabPanel>
+              <TabPanel className="custom-tab-panel">
+                <h2>Any content 4</h2>
+              </TabPanel>
+            </Tabs>
+          </div>
+        </>
+      </MainLayout>
     </div>
-  )
+  );
 }

@@ -1,0 +1,14 @@
+.search-result {
+  background-color: $white;
+  border-radius: $border-radius-30;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.search-products {
+  &-card {
+    &:not(:first-child) {
+      padding-top: 56px;
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.btn {
+  border-radius: $border-radius-30;
+  min-height: 70px;
+  border: none;
+  font-weight: $font-weight-semibold;
+  font-size: 17px;
+  line-height: 117%;
+
+  &-orange {
+    background-color: $orange;
+    color: $white;
+    &:focus, &:active, &:hover {
+      opacity: 0.8;
+      color: $white;
+    }
+  }
+
+  &-white {
+    background-color: $white;
+    color: $orange;
+  }
+}

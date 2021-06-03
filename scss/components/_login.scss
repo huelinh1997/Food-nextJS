@@ -1,0 +1,19 @@
+.login-page {
+    background-color: $gray-100;
+  .login-header {
+    padding: 120px 0 40px;
+    .login-img {
+      max-width: 150px;
+      height: auto;
+    }
+  }
+}
+
+.form-login {
+  padding: 0 35px 41px 35px;
+
+  &-link {
+    display: inline-block;
+    padding: 11px 0 136px 0;
+  }
+}

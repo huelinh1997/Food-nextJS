@@ -1,0 +1,30 @@
+.layout-container {
+  background-color: $gray-100;
+  .layout-header {
+    padding: 65px 35px 35px;
+    .icon-cart {
+      font-size: 24px;
+      color: $gray-400;
+    }
+
+    .icon-chevron-left {
+      font-size: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 24px;
+    }
+
+    .icon-menu {
+      font-size: 22px;
+    }
+
+    .icon-heart {
+      font-weight: bold;
+    }
+  }
+
+  .layout-main {
+    padding: 0 35px 50px 35px;
+  }
+}

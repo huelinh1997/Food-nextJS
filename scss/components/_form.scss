@@ -1,0 +1,66 @@
+.form-control {
+  &-input {
+    background: transparent;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-radius: 0;
+    padding: 0 0 12px 0;
+    font-size: 17px;
+    line-height: 120%;
+    font-weight: $font-weight-semibold;
+    height: 33px;
+    &:focus {
+      background: transparent;
+      outline: none;
+    }
+  }
+
+  &::-webkit-input-placeholder { 
+    color: $input-placeholder-color;
+  }
+  
+  &::-moz-placeholder {
+    color: $input-placeholder-color;
+  }
+  &:-ms-input-placeholder {
+    color: $input-placeholder-color;
+  }
+  &::placeholder {
+    color: $input-placeholder-color;
+  }
+
+  &-label {
+    color: $gray-400;
+    font-size: 15px;
+    line-height: 120%;
+    padding-bottom: 9px;
+  }
+
+  &-link {
+    color: $orange;
+    font-weight: $font-weight-semibold;
+    font-size: 17px;
+    line-height: 117%;
+    &:focus, &:hover, &:active {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+
+  &-group {
+    padding: 23px 0 23px;
+    .text-danger {
+      font-size: 14px;
+    }
+  }
+
+  &-search {
+    height: 60px;
+    background-color: $gray-200;
+    border: 0;
+    border-radius: $border-radius-30;
+    padding: 10px 10px 10px 69px;
+  }
+}

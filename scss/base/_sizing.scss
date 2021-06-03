@@ -1,0 +1,27 @@
+@for $i from 1 through 300 {
+  // padding
+  .p-b-#{$i} {
+    padding-bottom: #{$i}px;
+  }
+  .p-t-#{$i} {
+    padding-top: #{$i}px;
+  }
+  .p-r-#{$i} {
+    padding-right: #{$i}px;
+  }
+  .p-l-#{$i} {
+    padding-left: #{$i}px;
+  }
+  .px-#{$i} {
+    padding-left: #{$i}px;
+    padding-right: #{$i}px;
+  }
+
+  // margin
+  .m-b-#{$i} {
+    margin-bottom: #{$i}px;
+  }
+  .m-r-#{$i} {
+    margin-right: #{$i}px;
+  }
+}
