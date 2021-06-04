@@ -1,5 +1,5 @@
 import axios from 'axios';
-const APIURL = '';
+const APIURL = 'https://60b89909b54b0a0017c03f9a.mockapi.io';
 
 function getApi(path, option = {}) {
   return axios.get(`${APIURL}/${path}`, {

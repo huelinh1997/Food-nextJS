@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
+import React from 'react';
 // import PropTypes from 'prop-types';
 import { Label, Row, Col, Button } from 'reactstrap';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -8,12 +7,8 @@ import { useForm } from 'react-hook-form';
 import { get } from 'lodash';
 import FormInput from '../FormInput/index';
 import { MIN_LENGTH_PASSWORD } from '../../share/constant/common';
-import {
-  loginAction,
-  cleanUpData,
-} from '../../redux/actions/authenticationAction';
 
-function FormLogin({ login, cleanDataAction }) {
+function FormLogin({ submitFormLogin }) {
   const formValidationSchema = {
     email: yup
       .string()
@@ -36,14 +31,8 @@ function FormLogin({ login, cleanDataAction }) {
   } = methods;
 
   const onSubmit = data => {
-    login({ email: data.email, password: data.password });
+    submitFormLogin({ email: data.email, password: data.password });
   };
-
-  useEffect(() => {
-    () => () => {
-      cleanDataAction();
-    };
-  }, []);
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="form-login">
@@ -108,17 +97,4 @@ function FormLogin({ login, cleanDataAction }) {
 
 FormLogin.propTypes = {};
 
-// const mapStateToProps = state => ({
-//   // errorMsg: state.userListReducer.messageError,
-// });
-
-const mapDispatchToProps = dispatch => ({
-  login: params => dispatch(loginAction(params)),
-  cleanDataAction: () => dispatch(cleanUpData()),
-});
-
-const withConnect = connect(
-  null,
-  mapDispatchToProps,
-);
-export default withConnect(FormLogin);
+export default FormLogin;
